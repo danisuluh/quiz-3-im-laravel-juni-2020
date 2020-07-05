@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('items.index');
 });
 
-Route::get('/artikel/create', function(){
-    return view ('items.form_artikel');
-});
+Route::get('/artikel','ArtikelController@index');
+
+Route::get('/artikel/create','ArtikelController@create');
+
+// Route::post('/artikel','ArtikelController@index');
+
+// Route::get('/artikel/{id}','ArtikelController@');
+
+// Route::get('/artikel/{id}/edit','ArtikelController@');
+
+// Route::put('/artikel/{id}','ArtikelController@');
+
+// Route::delete('/artikel/{id}','ArtikelController@');
