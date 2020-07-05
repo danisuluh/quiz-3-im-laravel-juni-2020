@@ -25,11 +25,17 @@
             </tr>
           </tfoot>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Judul Artikel sdgfnka</td>
-              <td>Edinburgh</td>
-            </tr>
+            @foreach ($items as $key => $item)
+                    <tr>
+                      <td>{{$key+1}}</td>
+                      <td>{{$item->judul}}</td>
+                      <td>
+                        <a class="btn btn-primary" href="/artikel/{{ $item->id }}" role="button">Detail Artikel</a>
+                        <a class="btn btn-primary" href="/artikel/{{ $item->id }}/edit" role="button">Ubah</a>
+                        <a class="btn btn-primary" href="#" role="button">Hapus</a>
+                      </td>
+                    </tr>
+                 @endforeach
             
           </tbody>
         </table>

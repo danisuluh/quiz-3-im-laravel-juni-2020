@@ -19,9 +19,9 @@ Route::get('/artikel','ArtikelController@index');
 
 Route::get('/artikel/create','ArtikelController@create');
 
-// Route::post('/artikel','ArtikelController@index');
+Route::post('/artikel','ArtikelController@store');
 
-// Route::get('/artikel/{id}','ArtikelController@');
+Route::get('/artikel/{id}','ArtikelController@detail');
 
 // Route::get('/artikel/{id}/edit','ArtikelController@');
 
