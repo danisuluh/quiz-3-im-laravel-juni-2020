@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('items.index');
 });
+
+Route::get('/artikel/create', function(){
+    return view ('items.form_artikel');
+});
