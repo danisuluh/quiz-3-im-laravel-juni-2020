@@ -32,7 +32,7 @@
                       <td>
                         <a class="btn btn-primary" href="/artikel/{{ $item->id }}" role="button">Detail Artikel</a>
                         <a class="btn btn-primary" href="/artikel/{{ $item->id }}/edit" role="button">Ubah</a>
-                        <a class="btn btn-primary" href="#" role="button">Hapus</a>
+                        <a class="btn btn-primary" href="/artikel/{{ $item->id }}" role="button">Hapus</a>
                       </td>
                     </tr>
                  @endforeach

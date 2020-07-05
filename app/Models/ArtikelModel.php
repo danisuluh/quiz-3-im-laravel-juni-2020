@@ -18,6 +18,10 @@ class ArtikelModel {
     return $new_pertanyaan;
   }
 
+  public static function find_by_id ($id){
+    $item = DB::table('artikels')->where('id',$id)->first();
+    return $item;
+  }
   // public static function save($data){ //diharapkan datanya nanti dirubah menjadi array assoc
   //   //hilangkan _token
   //   unset($data["_token"]);

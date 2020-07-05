@@ -17,8 +17,9 @@ class ArtikelController extends Controller
         return view ('items.form_artikel');
     }
 
-    public function detail(){
-        return view ('items.detail_artikel');
+    public function detail($id){
+        $detail=ArtikelModel::find_by_id($id);
+        return view ('items.detail_artikel', compact('detail'));
     }
 
     public function store (Request $request){
@@ -27,5 +28,17 @@ class ArtikelController extends Controller
 
 
         return redirect('artikel');
+    }
+
+    public function edit (){
+        dd('edit');
+    }
+
+    public function update (){
+        dd ('update');
+    }
+
+    public function delete (){
+        dd('delete');
     }
 }

@@ -23,8 +23,8 @@ Route::post('/artikel','ArtikelController@store');
 
 Route::get('/artikel/{id}','ArtikelController@detail');
 
-// Route::get('/artikel/{id}/edit','ArtikelController@');
+Route::get('/artikel/{id}/edit','ArtikelController@edit');
 
-// Route::put('/artikel/{id}','ArtikelController@');
+Route::put('/artikel/{id}','ArtikelController@update');
 
-// Route::delete('/artikel/{id}','ArtikelController@');
+Route::delete('/artikel/{id}','ArtikelController@delete');
